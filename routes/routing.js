@@ -267,7 +267,7 @@ app.delete('/delete', function (req, res) {
                     if (error) throw error;
                     if(results.affectedRows == 0)
                     {
-                            return res.status(404).send({message: 'GIVEN KEY NOT FOUND!!--ENTER VALID EMAIL ID'});
+                            return res.status(404).send({message: 'GIVEN KEY NOT FOUND!!--ENTER VALID ID'});
                     }
             return res.status(200).send({message: 'DELETED SUCCESSFULLY.' });
             });

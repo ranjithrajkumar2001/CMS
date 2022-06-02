@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "beae3161-ba80-4ec0-b9af-b3f64bebfcb0",
+		"name": "CMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/read/?type=content&order=title",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"read",
+						""
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "content"
+						},
+						{
+							"key": "order",
+							"value": "title"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "role_name",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "access_rights",
+							"value": "all",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "all",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/create?type=role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"create"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "role"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "role_name",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "access_rights",
+							"value": "CRUD",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "all",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/update?type=role&condition=role_name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "role"
+						},
+						{
+							"key": "condition",
+							"value": "role_name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "role_name",
+							"value": "admin",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/delete?type=role&condition=role_name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"delete"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "role"
+						},
+						{
+							"key": "condition",
+							"value": "role_name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Content Creation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/content?type=content",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"content"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "content"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update content",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/updatecontent?type=content&user=demouser&title=portfolio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updatecontent"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "content"
+						},
+						{
+							"key": "user",
+							"value": "demouser"
+						},
+						{
+							"key": "title",
+							"value": "portfolio"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
